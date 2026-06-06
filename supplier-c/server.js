@@ -8,6 +8,8 @@ const suppliersRoute = require("./routes/suppliers");
 const purchaseOrdersRoute = require("./routes/purchaseOrders");
 const shipmentsRoute = require("./routes/shipments");
 const invoicesRoute = require("./routes/invoices");
+const eventlog = require("./routes/eventlog");
+const ocel = require("./routes/ocel")
 
 const app = express();
 
@@ -19,6 +21,8 @@ app.use("/api/suppliers", suppliersRoute);
 app.use("/api/purchase-orders", purchaseOrdersRoute);
 app.use("/api/shipments", shipmentsRoute);
 app.use("/api/invoices", invoicesRoute);
+app.use("/api/eventlog", eventlog);
+app.use("/api/ocel", ocel);
 
 app.get("/", (req, res) => {
   res.send("Supplier C ERP Backend Running");
