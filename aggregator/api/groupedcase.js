@@ -13,15 +13,15 @@ router.get("/", async (req, res) => {
       "http://localhost:5002/api/eventlog"
     );
 
-    const supplierC = await axios.get(
-      "http://localhost:5003/api/eventlog"
-    );
+    // const supplierC = await axios.get(
+    //   "http://localhost:5003/api/eventlog"
+    // );
 
     // Merge all events
     const allEvents = [
       ...supplierA.data.events,
       ...supplierB.data.events,
-      ...supplierC.data.events,
+      // ...supplierC.data.events,
     ];
 
     // Remove duplicates
