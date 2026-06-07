@@ -24,7 +24,7 @@ app.use("/api/invoices", invoicesRoute);
 app.use("/api/eventlog", eventlog);
 app.use("/api/ocel",  ocel );
 app.get("/", (req, res) => {
-  res.send("Supplier A ERP Backend Runningg");
+  res.send("Supplier A ERP Backend Running");
 });
 
 const PORT = process.env.PORT || 5001;
