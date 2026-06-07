@@ -6,7 +6,7 @@ const router = express.Router();
 const db = require("../db");
 
 router.get("/", (req, res) => {
-   res.send("there is the event log");
+   
   db.query("SELECT * FROM purchase_orders", (err, orders) => {
     if (err) {
       return res.send("error occured in data fetching"); }
