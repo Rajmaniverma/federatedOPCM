@@ -9,8 +9,7 @@ router.get("/", (req, res) => {
    res.send("there is the event log");
   db.query("SELECT * FROM purchase_orders", (err, orders) => {
     if (err) {
-      return res.status(500).json({ error: err.message });
-    }
+      return res.send("error occured in data fetching"); }
 
     db.query("SELECT * FROM shipments", (err, shipments) => {
       if (err) {
